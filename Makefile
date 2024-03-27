@@ -23,3 +23,6 @@ lint: ## Lint the code locally
 
 build: ## Builds the core of the game
 	cd core && GOOS=js GOARCH=wasm go build -o ../ui/core.wasm ./cmd/core/main.go
+
+serve: ## Starts a python webserver
+	cd ui && python3 -m http.server 8000
